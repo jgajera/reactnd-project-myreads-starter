@@ -1,11 +1,46 @@
 import React, { Component } from 'react';
-
+import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
+import escapeRegExp from 'escape-string-regexp'
+import sortBy from 'sort-by'
 
 class SearchPage extends Component {
+    static propTypes = {
+        books: PropTypes.array.isRequired
+    }
 
-render() {
-    return (
-        <div className="search-books">
+    state = {
+        query: '',
+        showSearchPage: false,
+        search: [],
+        searchedBooks: []
+    }
+
+    updateQuery = (query) => {
+        this.setState({ query: query.trim() })
+    }
+
+    clearQuery = () => {
+        this.setState({ query: '' })
+    }
+
+
+    render() {
+        const { books } = this.props
+        const { query } = this.state
+
+        let searchResults
+        if (query) {
+            const match = new RegExp(escapeRegExp(query), 'i')
+            searchResults = books.filter((book) => match.test(book.name))
+        } else {
+            searchResults = books
+        }
+        // searchResults.sort(sortBy('name'))
+
+
+        return (
+            <div className="search-books">
     <div className="search-books-bar">
         <a className="close-search" onClick={() => this.setState({ showSearchPage: false })}>Close</a>
         <div className="search-books-input-wrapper">
@@ -23,8 +58,8 @@ render() {
         <ol className="books-grid"></ol>
     </div>
 </div>
-    )
-}
+        )
+    }
 }
 
 

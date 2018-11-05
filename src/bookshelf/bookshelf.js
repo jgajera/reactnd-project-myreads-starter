@@ -1,12 +1,11 @@
-import React, {Component} from "react";
-import PropTypes from "prop-types";
+import React, { Component } from "react";
 import Book from "./Book";
 
 class Bookshelf extends Component {
-  render() {
-    console.log(this.props.books);
-    return (
-      <div className="list-books">
+    render() {
+        console.log(this.props.books);
+        return (
+            <div className="list-books">
         <div className="list-books-title">
           <h1>MyReads</h1>
         </div>
@@ -23,9 +22,10 @@ class Bookshelf extends Component {
                         <Book
                           book={book}
                           moveShelves={this.props.moveShelves}
+                          currentShelf="currentlyReading"
                           />
                       </li>
-                      
+
                     ))}
                 </ol>
               </div>
@@ -42,6 +42,7 @@ class Bookshelf extends Component {
                         <Book
                           book={book}
                           moveShelves={this.props.moveShelves}
+                          currentShelf="wantToRead"
                           />
                       </li>
                     ))}
@@ -60,6 +61,7 @@ class Bookshelf extends Component {
                         <Book
                           book={book}
                           moveShelves={this.props.moveShelves}
+                          currentShelf="read"
                           />
                       </li>
                     ))}
@@ -74,8 +76,8 @@ class Bookshelf extends Component {
           </a>
         </div>
       </div>
-    );
-  }
+        );
+    }
 }
 
 export default Bookshelf;

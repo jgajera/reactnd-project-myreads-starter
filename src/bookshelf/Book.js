@@ -1,23 +1,24 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 
 class Book extends Component {
-  render() {
-    return (
-      <div className="book">
-        <div className="book-top">
-          <div
-            className="book-cover"
-            style={{
-              width: 128,
-              height: 193,
-              backgroundImage: `url(${this.props.book.imageLinks.thumbnail})`
-            }}
-          />
+    render() {
+        return (
+            <div className="book">
+              <div className="book-top">
+              <div
+                className="book-cover"
+                style={{
+                  width: 128,
+                  height: 193,
+                  backgroundImage: `url(${this.props.book.imageLinks.thumbnail})`
+                }}
+              />
           <div className="book-shelf-changer">
             <select
               onChange={(event)=>this.props.moveShelves(
-                this.props.book,event.target.value
+                this.props.book, event.target.value
               )}
+              value={this.props.currentShelf}
             >
               <option value="move" disabled>
                 Move to...
@@ -32,8 +33,8 @@ class Book extends Component {
         <div className="book-title">{this.props.book.title}</div>
         <div className="book-authors">{this.props.book.authors}</div>
       </div>
-    );
-  }
+        );
+    }
 }
 
 export default Book;

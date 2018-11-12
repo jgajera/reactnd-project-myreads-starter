@@ -1,7 +1,7 @@
 ## Table of Contents
 * [Intro](#intro)
-* [TL;DR](#tldr)
 * [App overview](#overview)
+* [TL;DR](#tldr)
 * [File structure](#file-structure)
 * [Backend Server](#backend)
 * [Important](#important)
@@ -11,13 +11,6 @@
 # Intro
 
 I used a starter template for this final assessment project for Udacity's React Fundamentals course. In this template, I received a static example of the CSS and HTML markup that may be used, but no React code needed to complete the project. By choosing to start with this template, I had to add interactivity to the app by refactoring the static code in this template.
-
-## TL;DR
-
-To get started developing right away:
-
-* install all project dependencies with `npm install`
-* start the development server with `npm start`
 
 ## Overview
 In this application, the main page displays a list of "shelves" (i.e. categories), each of which contains a number of books. The three shelves are:
@@ -35,6 +28,13 @@ When a book is on a bookshelf, it should have the same state on both the main ap
 The search page also has a link to / (the root URL), which leads back to the main page.
 
 When you navigate back to the main page from the search page, you should instantly see all of the selections you made on the search page in your library.
+
+## TL;DR
+
+To get started developing right away:
+
+* install all project dependencies with `npm install`
+* start the development server with `npm start`
 
 ## File structure
 ```bash

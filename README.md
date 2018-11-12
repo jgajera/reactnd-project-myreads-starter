@@ -1,13 +1,12 @@
 ## Table of Contents
 * [Intro](#intro)
 * [TL;DR](#tldr)
-* [App overview](#mainjist)
-* [File structure](#filestructure)
-* [Backend Server](#backendserver)
+* [App overview](#overview)
+* [File structure](#file-structure)
+* [Backend Server](#backend)
 * [Important](#important)
-* [Create React App](#createreactapp)
 * [Contributing](#contributing)
-* [Resources used](#resourcesused)
+* [Resources Used](#resources)
 
 # Intro
 
@@ -20,7 +19,7 @@ To get started developing right away:
 * install all project dependencies with `npm install`
 * start the development server with `npm start`
 
-## Main jist of the app
+## Overview
 In this application, the main page displays a list of "shelves" (i.e. categories), each of which contains a number of books. The three shelves are:
 * Currently Reading
 * Want to Read
@@ -37,7 +36,7 @@ The search page also has a link to / (the root URL), which leads back to the mai
 
 When you navigate back to the main page from the search page, you should instantly see all of the selections you made on the search page in your library.
 
-## The file structure I started with
+## File structure
 ```bash
 ├── CONTRIBUTING.md
 ├── README.md
@@ -61,7 +60,7 @@ When you navigate back to the main page from the search page, you should instant
 
 Remember that good React design practice is to create new JS files for each component and use import/require statements to include them where they are needed.
 
-## Backend Server
+## Backend
 
 To simplify your development process, we've provided a backend server for you to develop against. The provided file [`BooksAPI.js`](src/BooksAPI.js) contains the methods you will need to perform necessary operations on the backend:
 * [`getAll`](#getall)
@@ -106,17 +105,14 @@ search(query)
 ## Important
 The backend API uses a fixed set of cached search results and is limited to a particular set of search terms, which can be found in [SEARCH_TERMS.md](SEARCH_TERMS.md). That list of terms are the _only_ terms that will work with the backend, so don't be surprised if your searches for Basket Weaving or Bubble Wrap don't come back with any results.
 
-## Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). You can find more information on how to perform common tasks [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
-
 ## Contributing
 
 This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
 
 For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
 
-## Resources used
+## Resources
+Below are the resources I used for this project:
 * [9 things every React.js beginner should know](https://camjackson.net/post/9-things-every-reactjs-beginner-should-know)
 * Maeva's [tutorial](https://www.youtube.com/watch?v=i6L2jLHV9j8&feature=youtu.be&t=307)
 * Very basic StackOverflow articles that taught me a lot -

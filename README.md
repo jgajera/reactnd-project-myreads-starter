@@ -1,4 +1,15 @@
-# MyReads Project
+## Table of Contents
+* [Intro](#intro)
+* [TL;DR](#tldr)
+* [App overview](#mainjist)
+* [File structure](#filestructure)
+* [Backend Server](#backendserver)
+* [Important](#important)
+* [Create React App](#createreactapp)
+* [Contributing](#contributing)
+* [Resources used](#resourcesused)
+
+# Intro
 
 I used a starter template for this final assessment project for Udacity's React Fundamentals course. In this template, I received a static example of the CSS and HTML markup that may be used, but no React code needed to complete the project. By choosing to start with this template, I had to add interactivity to the app by refactoring the static code in this template.
 
@@ -95,8 +106,6 @@ search(query)
 ## Important
 The backend API uses a fixed set of cached search results and is limited to a particular set of search terms, which can be found in [SEARCH_TERMS.md](SEARCH_TERMS.md). That list of terms are the _only_ terms that will work with the backend, so don't be surprised if your searches for Basket Weaving or Bubble Wrap don't come back with any results.
 
-The Udacity rubric for this project is located [here](https://review.udacity.com/#!/rubrics/918/view).
-
 ## Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). You can find more information on how to perform common tasks [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
@@ -115,3 +124,4 @@ For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
     - [Uncaught TypeError: Cannot read property 'state' of undefined - React](https://stackoverflow.com/questions/43942239/uncaught-typeerror-cannot-read-property-state-of-undefined-react) - the .onChange method made more sense after reading this thread
     - [How to update parent's state in React?](https://stackoverflow.com/questions/35537229/how-to-update-parents-state-in-react) - learned more about data transfer between components
 * Tyler's React Elements vs React Components [article](https://tylermcginnis.com/react-elements-vs-react-components/)
+* The Udacity rubric for this project is located [here](https://review.udacity.com/#!/rubrics/918/view)

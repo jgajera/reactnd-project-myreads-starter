@@ -8,7 +8,7 @@
 * [Contributing](#contributing)
 * [Resources Used](#resources)
 
-# Intro
+## Intro
 
 I used a starter template for this final assessment project for Udacity's React Fundamentals course. In this template, I received a static example of the CSS and HTML markup that may be used, but no React code needed to complete the project. By choosing to start with this template, I had to add interactivity to the app by refactoring the static code in this template.
 

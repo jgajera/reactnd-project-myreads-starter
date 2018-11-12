@@ -1,5 +1,5 @@
 import React from "react";
-import { Route } from 'react-router-dom'
+import { Route } from 'react-router-dom';
 
 import SearchPage from "./searchpage";
 import Bookshelf from "./bookshelf/bookshelf";
@@ -19,9 +19,10 @@ class BooksApp extends React.Component {
     }
 
     moveShelves = (book, shelf) => {
-        BooksAPI.update(book, shelf);
-        BooksAPI.getAll().then(books => {
-            this.setState({ books: books });
+        BooksAPI.update(book, shelf).then(() => {
+            BooksAPI.getAll().then(books => {
+                this.setState({ books: books });
+            });
         });
     }
 

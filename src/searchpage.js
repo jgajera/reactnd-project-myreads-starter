@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
+
 import Book from "./bookshelf/Book";
 import * as BooksAPI from "./BooksAPI";
 
@@ -16,15 +18,14 @@ class SearchPage extends Component {
     searchDisplay = (query) => {
         if (query) {
             BooksAPI.search(query).then((booksFound) => {
-                if(booksFound.error){
-                  this.setState({booksFound:[]});
+                if (booksFound.error) {
+                    this.setState({ booksFound: [] });
+                } else {
+                    this.setState({ booksFound: booksFound })
                 }
-                  else{
-                     this.setState({ booksFound: booksFound })
-                  }}
-            )
+            })
         } else {
-         this.setState({booksFound:[]});
+            this.setState({ booksFound: [] });
         }
     }
 
@@ -33,11 +34,12 @@ class SearchPage extends Component {
         return (
             <div className="search-books">
             <div className="search-books-bar">
-                <a className="close-search"
-                    onClick={() => this.setState({
-                        showSearchPage: false
-                    })}
-                >Close</a>
+                <Link
+                  to="/"
+                   className="close-search"
+                >
+                Close
+                </Link>
             <div className="search-books-input-wrapper">
             <input type="text"
                     placeholder="Search by title or author"
@@ -49,20 +51,35 @@ class SearchPage extends Component {
     </div>
     <div className="search-books-results">
         <ol className="books-grid">
-            {this.state.booksFound.map(bookFound => (
+            {
+             this.state.booksFound.map(bookFound => {
+              let shelf="none";
+
+              this.props.books.map(book =>
+               (book.id===bookFound.id ?
+                shelf=book.shelf:''
+              ));
+              
+              return (
                 <li key={bookFound.id}>
                     <Book
                     book={bookFound}
-                     />
-                    }
+                    moveShelves={this.props.moveShelves}
+                    currentShelf={shelf}
+                 />
                 </li>
-                ))
+               );
+              })
             }
-        </ol>
+         </ol>
     </div>
 </div>
+
         )
     }
+
+
+
 }
 
 export default SearchPage

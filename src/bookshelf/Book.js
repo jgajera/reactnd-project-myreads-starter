@@ -5,7 +5,6 @@ class Book extends Component {
         let imageCatch = this.props.book.imageLinks ?
             this.props.book.imageLinks.thumbnail :
             '';
-            
 
         return (
             <div className="book">

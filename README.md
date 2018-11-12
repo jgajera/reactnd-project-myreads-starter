@@ -106,3 +106,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
 
 For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Resources used
+* https://camjackson.net/post/9-things-every-reactjs-beginner-should-know
+* Maeva's [tutorial](https://www.youtube.com/watch?v=i6L2jLHV9j8&feature=youtu.be&t=307)
+* Very basic StackOverflow articles that taught me a lot -
+** [Pass props to parent component in React.js](https://stackoverflow.com/questions/22639534/pass-props-to-parent-component-in-react-js) - the connection between props, attributes, and state finally clicked
+** [Uncaught TypeError: Cannot read property 'state' of undefined - React](https://stackoverflow.com/questions/43942239/uncaught-typeerror-cannot-read-property-state-of-undefined-react) - the .onChange method made more sense after reading this thread
+** Tyler's React Elements vs React Components [article](https://tylermcginnis.com/react-elements-vs-react-components/)
+** [How to update parent's state in React?](https://stackoverflow.com/questions/35537229/how-to-update-parents-state-in-react) - learned more about data transfer between components

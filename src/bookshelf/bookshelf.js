@@ -1,13 +1,11 @@
 import React, { Component } from "react";
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 import Book from "./Book";
 
-class Bookshelf extends Component {
-    render() {
-        console.log(this.props.books);
-        return (
-            <div className="list-books">
+const Bookshelf = (props) => {
+    return (
+        <div className="list-books">
         <div className="list-books-title">
           <h1>MyReads</h1>
         </div>
@@ -17,13 +15,13 @@ class Bookshelf extends Component {
               <h2 className="bookshelf-title">Currently Reading</h2>
               <div className="bookshelf-books">
                 <ol className="books-grid">
-                  {this.props.books
+                  {props.books
                     .filter(book => book.shelf === "currentlyReading")
                     .map(book => (
                       <li key={book.id}>
                         <Book
                           book={book}
-                          moveShelves={this.props.moveShelves}
+                          moveShelves={props.moveShelves}
                           currentShelf="currentlyReading"
                           />
                       </li>
@@ -37,13 +35,13 @@ class Bookshelf extends Component {
               <h2 className="bookshelf-title">Want to Read</h2>
               <div className="bookshelf-books">
                 <ol className="books-grid">
-                  {this.props.books
+                  {props.books
                     .filter(book => book.shelf === "wantToRead")
                     .map(book => (
                       <li key={book.id}>
                         <Book
                           book={book}
-                          moveShelves={this.props.moveShelves}
+                          moveShelves={props.moveShelves}
                           currentShelf="wantToRead"
                           />
                       </li>
@@ -56,13 +54,13 @@ class Bookshelf extends Component {
               <h2 className="bookshelf-title">Read</h2>
               <div className="bookshelf-books">
                 <ol className="books-grid">
-                  {this.props.books
+                  {props.books
                     .filter(book => book.shelf === "read")
                     .map(book => (
                       <li key={book.id}>
                         <Book
                           book={book}
-                          moveShelves={this.props.moveShelves}
+                          moveShelves={props.moveShelves}
                           currentShelf="read"
                           />
                       </li>
@@ -80,8 +78,8 @@ class Bookshelf extends Component {
           </Link>
         </div>
       </div>
-        );
-    }
+    );
 }
+
 
 export default Bookshelf;

@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 
-class Book extends Component {
-    render() {
-        let imageCatch = this.props.book.imageLinks ?
-            this.props.book.imageLinks.thumbnail :
-            '';
 
-        return (
-            <div className="book">
+const Book = (props) => {
+    let imageCatch = props.book.imageLinks ?
+        props.book.imageLinks.thumbnail :
+        '';
+
+    return (
+        <div className="book">
               <div className="book-top">
               <div
                 className="book-cover"
@@ -19,10 +19,10 @@ class Book extends Component {
               />
           <div className="book-shelf-changer">
             <select
-              onChange={(event)=>this.props.moveShelves(
-                this.props.book, event.target.value
+              onChange={(event)=>props.moveShelves(
+                props.book, event.target.value
               )}
-              value={this.props.currentShelf}
+              defaultValue={props.currentShelf}
             >
               <option value="move" disabled>
                 Move to...
@@ -34,11 +34,11 @@ class Book extends Component {
             </select>
           </div>
         </div>
-        <div className="book-title">{this.props.book.title}</div>
-        <div className="book-authors">{this.props.book.authors}</div>
+        <div className="book-title">{props.book.title}</div>
+        <div className="book-authors">{props.book.authors}</div>
       </div>
-        );
-    }
+    );
 }
+
 
 export default Book;

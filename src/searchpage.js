@@ -31,7 +31,6 @@ class SearchPage extends Component {
     }
 
     render() {
-        console.log(this.props.books);
         return (
             <div className="search-books">
             <div className="search-books-bar">

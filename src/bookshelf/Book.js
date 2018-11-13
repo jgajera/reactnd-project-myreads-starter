@@ -1,6 +1,3 @@
-import React, { Component } from "react";
-
-
 const Book = (props) => {
     let imageCatch = props.book.imageLinks ?
         props.book.imageLinks.thumbnail :
